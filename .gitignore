@@ -1,0 +1,5 @@
+# files
+*.swp
+
+# folders
+.vim/bundle
