@@ -22,6 +22,8 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()
 

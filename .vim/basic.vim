@@ -19,5 +19,8 @@ set expandtab
 " appearance: file exlpoerer
 let g:netrw_liststyle=3
 
+" settings: backspace (mainly for mac)
+set backspace=indent,eol,start
+
 " settings: update time for plugins (shorter for GitGutter)
 set updatetime=750
