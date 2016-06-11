@@ -4,7 +4,7 @@ set nu
 syntax on
 set cursorline
 highlight ColorColumn ctermbg=gray
-set colorcolumn=80
+set colorcolumn=81
 
 " appearance: whitespace
 highlight ExtraWhitespace ctermbg=red
