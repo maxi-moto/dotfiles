@@ -1,11 +1,10 @@
+#!/bin/bash
 ###############################################################################
 #
 # Dotfile install script
 # Creates sym links from my home directory to my .dotfile directory
 #
 ###############################################################################
-
-#!/bin/bash
 
 dotfiles=$HOME/.dotfiles/*
 
