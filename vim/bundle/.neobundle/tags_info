@@ -1,0 +1,7 @@
+YouCompleteMe
+ack.vim
+neobundle.vim
+rust.vim
+vim-airline
+vim-fugitive
+vim-gitgutter

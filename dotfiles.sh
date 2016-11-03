@@ -6,28 +6,29 @@
 #
 ###############################################################################
 
-dotfiles=$HOME/.dotfiles/*
+# dotfiles=$HOME/.dotfiles/*
+dotfiles=$PWD/*
 
 create_sym_link () {
-  local source=$1
-  local destination=$2
+  local source_file
+  source_file=$1
+  local destination_file
+  destination_file=$2
 
-  printf "Creating symbolic link %s -> %s ...\n" $source $destination
-  ln -sfn $source $destination
+  printf "Creating symbolic link ${source_file} -> ${destination_file} ...\n"
+  ln -sfn ${source_file} ${destination_file}
 }
 
 printf "\n\nCreating symlinks for dot files ... \n\n"
 
-shopt -s dotglob
 for file in $dotfiles
 do
   file_name=$(basename "$file")
-  destination=$HOME/$file_name
+  destination_file=$HOME/.$file_name
 
-  if [ $file_name != "dotfiles.sh" ] && [ $file_name != "bootstrap.sh" ] &&
-      [ $file_name != ".git" ] && [ $file_name != ".gitignore" ] &&
-      [ $file_name != "README.md" ]; then
-    create_sym_link $file $destination
+  if [ "${file_name}" != "dotfiles.sh" ] && [ "${file_name}" != "bootstrap.sh" ] &&
+      [ "${file_name}" != "README.md" ]; then
+    create_sym_link $file $destination_file
   fi
 done
 

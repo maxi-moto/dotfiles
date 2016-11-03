@@ -7,7 +7,7 @@
 
 # Install NeoBundle
 curl \
-https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh 
+https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh\
   | sh
 
 # update plugins
