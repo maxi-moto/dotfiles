@@ -6,8 +6,31 @@ source ~/.vim/keymap.vim
 source ~/.vim/airline.vim
 
 "=========== Package Manager ============
-"install NeoBundle via:
-"curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
-"sh ./install.sh
+"
+" install dein
+"
 "========================================
-source ~/.vim/neobundle.vim
+source ~/.vim/dein.packages.vim
+
+" if &compatible
+"   set nocompatible
+" endif
+
+" set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
+
+" if dein#load_state('~/.vim/bundle')
+"   call dein#begin('~/.vim/bundle')
+
+"   call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
+"   call dein#add('Shougo/neocomplete.vim')
+
+"   call dein#end()
+"   call dein#save_state()
+" endif
+
+" filetype plugin indent on
+" syntax enable
+
+" if dein#check_install()
+"   call dein#install()
+" endif

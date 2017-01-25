@@ -3,4 +3,4 @@
 *.netrwhist
 
 # folders
-.vim/bundle
+vim/bundle/
