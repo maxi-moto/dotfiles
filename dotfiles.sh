@@ -6,8 +6,27 @@
 #
 ###############################################################################
 
-# dotfiles=$HOME/.dotfiles/*
 dotfiles=$PWD/*
+
+IGNORE_ARRAY=(
+  'dotfiles.sh'
+  'bootstrap.sh'
+  'README.md'
+)
+
+ignored_file() {
+  local target
+  target=$1
+
+  local current_file
+  for current_file in ${IGNORE_ARRAY[@]}; do
+    if [[ ${current_file} == ${target} ]]; then
+      return 1
+    fi
+  done
+
+  return 0
+}
 
 create_sym_link () {
   local source_file
@@ -21,14 +40,12 @@ create_sym_link () {
 
 printf "\n\nCreating symlinks for dot files ... \n\n"
 
-for file in $dotfiles
-do
-  file_name=$(basename "$file")
-  destination_file=$HOME/.$file_name
+for file in $dotfiles; do
+  file_name=$(basename "${file}")
+  destination_file=$HOME/.${file_name}
 
-  if [ "${file_name}" != "dotfiles.sh" ] && [ "${file_name}" != "bootstrap.sh" ] &&
-      [ "${file_name}" != "README.md" ]; then
-    create_sym_link $file $destination_file
+  if ignored_file ${file_name}; then
+    create_sym_link ${file} ${destination_file}
   fi
 done
 
