@@ -5,6 +5,7 @@ syntax on
 set cursorline
 highlight ColorColumn ctermbg=gray
 set colorcolumn=81
+set nowrap
 
 " appearance: whitespace
 highlight ExtraWhitespace ctermbg=red
