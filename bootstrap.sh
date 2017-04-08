@@ -5,13 +5,18 @@
 #
 ###############################################################################
 
-# Install NeoBundle
-curl \
-https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh\
-  | sh
+# set up dotfiles
+bash dotfiles.sh
 
-# update plugins
-vim +NeoBundleInstall +qall
+# install dein
+curl \
+  https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh\
+  | sh -s $HOME/.vim/bundle
+
+# update packages
+vim +dein#isntall +qall
 
 # configure plugins
-cd $HOME/.vim/bundle/YouCompleteMe && ./install.py --all
+cd $HOME/.vim/bundle/repos/github.com/Valloric/YouCompleteMe\
+  && ./install.py --all
+

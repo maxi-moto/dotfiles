@@ -2,12 +2,15 @@
 
 These are my dotfiles.
 
-# dotfiles.sh
+Definately a work in progess.
 
-dotfiles.sh is a simple script to set up the dotfiles.
-run with: sh dotfiles.sh
+# Install
 
-#### What is does
+To install, just run bash boostrap.sh
 
-dotfiles.sh loops through the directory the script is located, ignoring files
-in the ignore file array, and creates symbolic links to the home directory.
+# bootstrap.sh
+
+boostrap.sh calls dotfiles.sh which sets up symlinks in the home directory. Then
+it runs through the set up of dein, the package manager I'm using for vim.
+Finally, it installs all the plugins and configures them.
+
