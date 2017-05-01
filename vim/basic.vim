@@ -1,4 +1,5 @@
 " appearance: theme
+set nocompatible
 set background=dark
 set nu
 syntax on
@@ -6,6 +7,7 @@ set cursorline
 highlight ColorColumn ctermbg=gray
 set colorcolumn=81
 set nowrap
+filetype plugin on
 
 " appearance: whitespace
 highlight ExtraWhitespace ctermbg=red
@@ -20,8 +22,13 @@ set expandtab
 " appearance: file exlpoerer
 let g:netrw_liststyle=3
 
+" settings: autocomplete
+set path+=**
+set wildmenu
+
 " settings: backspace (mainly for mac)
 set backspace=indent,eol,start
 
 " settings: update time for plugins (shorter for GitGutter)
 set updatetime=750
+
