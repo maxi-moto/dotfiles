@@ -8,11 +8,14 @@ Definately a work in progess.
 
 To install, just run bash boostrap.sh
 
+# dotfiles.sh
+dofiles.sh creates symlinks from the files to the home directory. It should be
+able to be ran at any point (as a way of updating).
+
 # bootstrap.sh
 
 boostrap.sh calls dotfiles.sh which sets up symlinks in the home directory. Then
 it runs through the set up of dein, the package manager I'm using for vim.
 Finally, it installs all the plugins and configures them.
 
-There may be additional set up (depends on system) to get YouCompleteMe running.
-Read the docs for what exactly is needed
+You should only run boostrap.sh once or remove everything and run it again.
