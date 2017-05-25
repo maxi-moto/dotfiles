@@ -1,0 +1,10 @@
+# variables: colors
+blue="\[\033[0;36m\]"
+default="\[\033[0;39m\]"
+gray="\[\033[0;90m\]"
+green="\[\033[0;32m\]"
+
+export EDITOR=vim
+
+# PS1="${green}\u${blue}@${gray}\h${blue}: \w${green}\$(__git_ps1 ' [%s]')\n${green}└─ \$ ▶${default} "
+PS1="${green}\u${gray}@${green}\h${blue}: \w${green}\$(__git_ps1 ' [%s]') ${gray}▶▶${default} "
