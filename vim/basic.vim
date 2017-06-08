@@ -4,6 +4,7 @@ set background=dark
 set nu
 syntax on
 set cursorline
+highlight CursorLine cterm=NONE ctermbg=darkred
 highlight ColorColumn ctermbg=gray
 set colorcolumn=81
 set nowrap
