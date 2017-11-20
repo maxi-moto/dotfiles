@@ -1,7 +1,8 @@
 " appearance: theme
 set nocompatible
 set background=dark
-set nu
+set number
+set relativenumber
 syntax on
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=darkred
